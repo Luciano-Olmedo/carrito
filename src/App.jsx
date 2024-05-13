@@ -6,9 +6,10 @@ import Carrito from './pages/Carrito'
 
 const App = () => {
   return (
-
     <>
     <Navbar/>
+    <div className='container'>
+   
       <Routes>
         <Route path='/' element={<ComprasPage/>}>    </Route>
         <Route path='/carrito' element={<Carrito/>}>    </Route>
@@ -16,6 +17,7 @@ const App = () => {
 
 
       </Routes>
+    </div>
     </>
   )
 }
