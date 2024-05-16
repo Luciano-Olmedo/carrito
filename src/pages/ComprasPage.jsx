@@ -24,32 +24,18 @@ const ComprasPage = () => {
 
 
   return (
-    <div className='grid grid-cols-3 gap-10'>
-     
+    <div className='grid grid-cols-3 gap-10 mt-10'>     
       {
-        productos.map(producto => ((
-          
+        productos.map(producto => ((          
             <Card
               image={producto.image}
               titulo={producto.title}
               description={producto.description}
               price={producto.price}
-              
-
             >
-
             </Card>
-          
-
-
         )))
       }
-
-
-
-
-
-
     </div >
   )
 }
