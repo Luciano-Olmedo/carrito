@@ -1,25 +1,23 @@
 import React from 'react'
-import { Routes,Route, Navigate } from 'react-router-dom'
+import { Routes, Route, Navigate } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import ComprasPage from './pages/ComprasPage'
 import Carrito from './pages/Carrito'
+import { ProductosProvider } from './context/ProductosProvider'
 
-const App = () => {
+
+export const App = () => {
   return (
-    <>
-    <Navbar/>
-    <div className='container'>
-   
-      <Routes>
-        <Route path='/' element={<ComprasPage/>}>    </Route>
-        <Route path='/carrito' element={<Carrito/>}>    </Route>
-        <Route path='/*' element={<Navigate to="/"/>}>  </Route>
-
-
-      </Routes>
-    </div>
-    </>
+    <ProductosProvider>
+      <Navbar />
+      <div className='container'>
+        <Routes>
+          <Route path='/' element={<ComprasPage />}>    </Route>
+          <Route path='/carrito' element={<Carrito />}>    </Route>
+          <Route path='/*' element={<Navigate to="/" />}>  </Route>
+        </Routes>
+      </div>
+    </ProductosProvider>
   )
 }
 
-export default App
