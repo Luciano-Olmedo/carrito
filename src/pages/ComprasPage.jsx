@@ -1,10 +1,12 @@
+import { useContext } from 'react'
 import Card from '../components/Card'
 import { ProductoContext } from '../context/ProductoContext'
 
 
-const ComprasPage = () => {
 
+const ComprasPage = () => {
   const {productos} = useContext(ProductoContext)
+
 
   return (
     <div className='grid  grid-cols-1 lg:grid-cols-3 gap-10 mt-10'>     

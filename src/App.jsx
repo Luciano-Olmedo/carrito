@@ -3,7 +3,7 @@ import { Routes, Route, Navigate } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import ComprasPage from './pages/ComprasPage'
 import Carrito from './pages/Carrito'
-import { ProductosProvider } from './context/ProductosProvider'
+import {ProductosProvider} from './context/ProductosProvider'
 
 
 export const App = () => {

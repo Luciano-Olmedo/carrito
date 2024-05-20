@@ -19,9 +19,9 @@ export const ProductosProvider = ({ children }) => {
     fetchProductos()
   }, [])
   return (
-    <ProductoContext.ProductosProvider value={{ productos }}>
+    <ProductoContext.Provider value={{productos}}>
       {children}
-    </ProductoContext.ProductosProvider>
+    </ProductoContext.Provider>
   )
 }
 
