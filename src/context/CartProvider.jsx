@@ -1,10 +1,20 @@
-import { CartContext } from './CartContext'
 import { useReducer } from 'react'
+import {CartContext} from './CartContext'
+
 
 const initialState = []
 
 export const CartProvider = ({ Children }) => {
-
+  const comprasReducer = (state = initialState, action = {}) => {
+    switch (action.type) {
+      case '[CART] Agregar Compra':
+        return [...state, action.payload]
+      case '[CART] Eliminar Compra':
+        return state.filter(compra => compra.id !== action.payload)
+      default:
+        return state;
+    }
+  }
   const [listaCompras, dispatch] = useReducer(comprasReducer, initialState)
 
   const agregarCompra = (compra) => {
@@ -36,34 +46,11 @@ export const CartProvider = ({ Children }) => {
     dispatch(action)
   }
 
-  const comprasReducer = (state = initialState, action = {}) => {
-    switch (action.type) {
-      case '[CART] Agregar Compra':
-        return [...state, action.payload]
-
-      case '[CART] Aumentar Cantidad Compra':
-
-        break;
-
-      case '[CART] Agregar Compra':
-
-        break;
-
-      case '[CART] Eliminar Compra':
-
-        return state.filter(compra => compra.id !== action.payload)
-
-
-      default:
-        return state;
-    }
-  }
-
 
   return (
-    <CartProvider.CartProvider value={{ listaCompras, agregarCompra, aumentarCantidad, disminuirCantidad, eliminarCompra }}>
+    <CartContext.Provider value={{ listaCompras, agregarCompra, aumentarCantidad, disminuirCantidad, eliminarCompra }}>
       {Children}
-    </CartProvider.CartProvider>
+    </CartContext.Provider>
   )
 }
 
