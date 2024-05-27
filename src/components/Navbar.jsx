@@ -4,15 +4,15 @@ import { Link } from 'react-router-dom'
 
 const Navbar = () => {
     return (
-        <nav className="bg-white border-gray-200">
+        <nav className=" border-gray-200">
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-                <Link to='/' className="flex items-center ">                    
+                <Link to='/' className="flex items-center ">
                     <span className="self-center text-2xl font-semibold ">Magic Shop</span>
                 </Link>
-                <div class=" bg-gray-100 flex justify-center items-center">
-                    <div class="relative py-2">
-                        <div class="t-0 absolute left-3">
-                            <p class="flex h-2 w-2 items-center justify-center rounded-full bg-red-500 p-3 text-xs text-white">4</p>
+                <div className=" bg-gray-100 flex justify-center items-center">
+                    <div className="relative py-2">
+                        <div className="t-0 absolute left-3">
+                            <p className="flex h-2 w-2 items-center justify-center rounded-full bg-red-500 p-3 text-xs text-white">4</p>
                         </div>
                         <Link to='/carrito'>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="file: mt-4 h-6 w-6">

@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { Routes, Route, Navigate } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import ComprasPage from './pages/ComprasPage'
@@ -12,14 +12,15 @@ export const App = () => {
 
     <ProductosProvider>
       <CartProvider>
-        <Navbar />
-        <div className='container'>
-          <Routes>
-            <Route path='/' element={<ComprasPage />}>    </Route>
-            <Route path='/carrito' element={<Carrito />}>    </Route>
-            <Route path='/*' element={<Navigate to="/" />}>  </Route>
-          </Routes>
-        </div>
+        <Navbar>
+          <div className='container'>
+            <Routes>
+              <Route path='/' element={<ComprasPage />}>    </Route>
+              <Route path='/carrito' element={<Carrito />}>    </Route>
+              <Route path='/*' element={<Navigate to="/" />}>  </Route>
+            </Routes>
+          </div>
+        </Navbar>
       </CartProvider>
     </ProductosProvider>
   )

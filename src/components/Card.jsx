@@ -1,13 +1,15 @@
 import React, { useState } from 'react'
 
-const Card = ({ title, description, image, price }) => {
+const Card = ({ title, description, image, price ,handleAgregar,handleQuitar,handleDisminuir,handleAumentar }) => {
 
     const [added, setAdded] = useState(false)
 
     const clickAgregar = () => {
+        handleAgregar()
         setAdded(true)
     }
     const clickQuitar = () => {
+        handleQuitar()
         setAdded(false)
     }
 
