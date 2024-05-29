@@ -10,16 +10,15 @@ import { CartProvider } from './context/CartProvider'
 export const App = () => {
   return (
     <ProductosProvider>
-      
-        <Navbar>
-          <div className='container'>
-            <Routes>
-              <Route path='/' element={<ComprasPage />}>    </Route>
-              <Route path='/carrito' element={<Carrito />}>    </Route>
-              <Route path='/*' element={<Navigate to="/" />}>  </Route>
-            </Routes>
-          </div>
-        </Navbar>
+
+      <Navbar></Navbar>
+        <div className='container'>
+          <Routes>
+            <Route path='/' element={<ComprasPage />}>    </Route>
+            <Route path='/carrito' element={<Carrito />}>    </Route>
+            <Route path='/*' element={<Navigate to="/" />}>  </Route>
+          </Routes>
+        </div>
       
     </ProductosProvider>
   )

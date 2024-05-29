@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 const Navbar = () => {
     return (
-        <nav className=" border-gray-200">
+        <nav className=" border-gray-200 bg-blue-300">
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                 <Link to='/' className="flex items-center ">
                     <span className="self-center text-2xl font-semibold ">Magic Shop</span>
