@@ -9,9 +9,8 @@ import { CartProvider } from './context/CartProvider'
 
 export const App = () => {
   return (
-
     <ProductosProvider>
-      <CartProvider>
+      
         <Navbar>
           <div className='container'>
             <Routes>
@@ -21,7 +20,7 @@ export const App = () => {
             </Routes>
           </div>
         </Navbar>
-      </CartProvider>
+      
     </ProductosProvider>
   )
 }
