@@ -4,7 +4,7 @@ import Navbar from './components/Navbar'
 import ComprasPage from './pages/ComprasPage'
 import Carrito from './pages/Carrito'
 import { ProductosProvider } from './context/ProductosProvider'
-import { CartProvider } from './context/CartProvider'
+
 
 
 export const App = () => {

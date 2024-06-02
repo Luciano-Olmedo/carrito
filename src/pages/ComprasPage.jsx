@@ -1,13 +1,13 @@
 import { useContext } from 'react'
 import Card from '../components/Card'
 import { ProductoContext } from '../context/ProductoContext'
-import { CartContext } from '../context/CartContext'
+
 
 
 
 const ComprasPage = () => {
   const { productos } = useContext(ProductoContext)
-  //const { agregarCompra, eliminarCompra } = useContext(CartContext)
+  
 
   const handleAgregar = (compra) => {
     agregarCompra(compra)
