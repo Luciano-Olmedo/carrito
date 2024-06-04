@@ -9,32 +9,51 @@ export const CarritoProvider = ({ Children }) => {
 
     const agregarCompra = (compra) => {
         const action = {
-            type: '',
+            type: '[CARRITO] Nuevo',
             payload: compra
         }
         dispatch(action)
     }
     const aumentarCantidad = (id) => {
         const action = {
-            type: '',
+            type: '[CARRITO] Aumentar',
             payload: id
         }
         dispatch(action)
     }
     const disminuirCantidad = (id) => {
         const action = {
-            type: '',
+            type: '[CARRITO] Disminuir',
             payload: id
         }
         dispatch(action)
     }
     const eliminarCompra = (id) => {
         const action = {
-            type: '',
+            type: '[CARRITO] Eliminar',
             payload: id
         }
         dispatch(action)
     }
+    //REDUCER
+    const comprasReducer = (state = initialState, action = {}) => {
+        switch (action.type) {
+            case '[CARRITO] Nuevo':
+                return [...state, action.payload]
+            case '[CARRITO] Aumentar':
+                break;
+            case '[CARRITO] Disminuir':
+                break;
+            case '[CARRITO] Eliminar':
+                return state.filter(compra => compra.id !== action.payload)
+            default:
+                return state
+        }
+    }
+
+
+
+
 
     return (
         <CarritoContext>
