@@ -1,13 +1,16 @@
 import { useContext } from 'react'
 import Card from '../components/Card'
 import { ProductoContext } from '../context/ProductoContext'
+import { CarritoContext } from '../context/CarritoContext'
 
 
 
 
 const ComprasPage = () => {
   const { productos } = useContext(ProductoContext)
-  
+
+  const { agregarCompra, eliminarCompra } = useContext(CarritoContext)
+
 
   const handleAgregar = (compra) => {
     agregarCompra(compra)
@@ -41,7 +44,7 @@ const ComprasPage = () => {
           )))
         }
       </div >
-     
+
     </>
   )
 }
