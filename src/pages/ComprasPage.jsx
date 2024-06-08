@@ -19,12 +19,7 @@ const ComprasPage = () => {
     eliminarCompra(id)
 
   }
-  const handleAumentar = (id) => {
 
-  }
-  const handleDisminuir = (id) => {
-
-  }
 
   return (
     <>
